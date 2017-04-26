@@ -13,21 +13,26 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String[] mPlanetTitles;
+    private String[] itensMenuLateral;
     private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
+    private ListView listaMenuLateral;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //mPlanetTitles = getResources().getStringArray(R.array.menu_strings);
-        //mDrawerLayout = (DrawerLayout) findViewById(R.id.controlador_menu_lateral);
-        //mDrawerList = (ListView) findViewById(R.id.menu_lateral);
+        itensMenuLateral = getResources().getStringArray(R.array.itens_menu_lateral);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.controlador_menu_lateral);
+        listaMenuLateral = (ListView) findViewById(R.id.lista_menu_lateral);
 
-        //mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_2, mPlanetTitles));
-        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(
+            this,
+            android.R.layout.simple_list_item_1,
+            itensMenuLateral
+        );
+        listaMenuLateral.setAdapter(adaptador);
+        listaMenuLateral.setOnItemClickListener(new DrawerItemClickListener());
 
         Toolbar barraPrincipal = (Toolbar) findViewById(R.id.barra_principal);
         setSupportActionBar(barraPrincipal);
