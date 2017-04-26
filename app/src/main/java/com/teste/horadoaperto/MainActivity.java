@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mPlanetTitles = getResources().getStringArray(R.array.menu_strings);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.controlador_menu_lateral);
-        mDrawerList = (ListView) findViewById(R.id.menu_lateral);
+        //mPlanetTitles = getResources().getStringArray(R.array.menu_strings);
+        //mDrawerLayout = (DrawerLayout) findViewById(R.id.controlador_menu_lateral);
+        //mDrawerList = (ListView) findViewById(R.id.menu_lateral);
 
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_2, mPlanetTitles));
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        //mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_2, mPlanetTitles));
+        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         Toolbar barraPrincipal = (Toolbar) findViewById(R.id.barra_principal);
         setSupportActionBar(barraPrincipal);
