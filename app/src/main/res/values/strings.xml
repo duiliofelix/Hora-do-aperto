@@ -11,8 +11,9 @@
     <string name="settings">Configurações</string>
 
     <string-array name="menu_strings">
-        <item>Item 1</item>
-        <item>Item 2</item>
-        <item>Item 3</item>
+        <item>Item1</item>
+        <item>Item2</item>
+        <item>Item3</item>
     </string-array>
+    <string name="title_activity_main">Hora do Aperto</string>
 </resources>
